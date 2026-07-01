@@ -77,8 +77,7 @@ def get_rooms(keyword: str | None = None, status: str | None = None, min_capacit
 
     result = rooms
     if keyword:
-        result = [room for room in result if keyword.lower(
-        ) in room["code"].lower() or keyword.lower() in room["name"].lower()]
+        result = [room for room in result if keyword.lower() in room["code"].lower() or keyword.lower() in room["name"].lower()]
     if status:
         result = [room for room in result if room["status"] == status]
     if min_capacity:
